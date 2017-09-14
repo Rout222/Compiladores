@@ -8,8 +8,8 @@ data = lex.lexIt(data)
 def match(a):
 	global pos
 	if data[pos][0] == a:
-		print(data[pos][1])
 		pos += 1
+		return(data[pos][1])
 	else:
 		error = True
 
@@ -20,7 +20,7 @@ def number(n):
 		error = True
 	else:
 		pos += 1
-		print(n[1])
+		return(n[1])
 
 def S():
 	#print("S")
