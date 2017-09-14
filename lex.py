@@ -61,13 +61,13 @@ lex.lex()
 lexer = lex.lex()
 
 # Test it out
-data = '''
-3 + 4 * 10
-  + -20 *2
-'''
+data = '3 + 4 * 10'
 
 # Give the lexer some input
-lexer.input(data)
-
-for tok in lexer:
-    print(tok)
+def lexIt(data):
+    lexer.input(data)
+    output = []
+    for tok in lexer:
+        output += [[tok.type, tok.value]]
+    output += ["EOF", "EOF"]
+    return (output)
