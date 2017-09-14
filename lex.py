@@ -69,5 +69,5 @@ def lexIt(data):
     output = []
     for tok in lexer:
         output += [[tok.type, tok.value]]
-    output += ["EOF", "EOF"]
+    output += [["EOF", "EOF"]]
     return (output)
